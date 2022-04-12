@@ -1,0 +1,59 @@
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+
+    <style>
+    #myCount {
+     color:  #337ab7;
+     border-color: black;
+     margin-right: 2%;
+     margin-top: 1%;
+     font-family: 'Orbitron', sans-serif;
+     border-style: solid;
+     border-radius: 8%;
+     padding:1%;
+     width:15%;
+     text-align:center;
+    }
+
+    #minuteTime {
+    font-size: 60px;
+    width: min-content;
+    }
+
+    #secondTime {
+    font-size: 40px;
+    width: min-content;
+    }
+
+
+    </style>
+
+<script>
+
+let totalSeconds = 900;
+
+function subtractOne()
+{
+    totalSeconds -= 1;
+     return totalSeconds;
+}
+setInterval(myTimer, 1000);
+
+function myTimer() {
+  document.getElementById("minuteTime").innerHTML = Math.floor(totalSeconds / 60) + ":";
+  document.getElementById("secondTime").innerHTML = totalSeconds % 60;
+  subtractOne();
+}
+
+
+
+
+</script>
+<head>
+<div id="myCount">
+<span id="minuteTime">15:</span> <span id="secondTime">0</span> 
+</div>
+</html>

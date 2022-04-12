@@ -1,0 +1,24 @@
+<html>
+
+<script>
+
+let totalSeconds = 900;
+
+function subtractOne()
+{
+    totalSeconds -= 1;
+     return totalSeconds;
+}
+setInterval(myTimer, 1000);
+
+function myTimer() {
+  document.getElementById("demo").innerHTML = Math.floor(totalSeconds / 60);
+  document.getElementById("demo2").innerHTML = totalSeconds % 60;
+  subtractOne();
+}
+
+
+</script>
+<span id="demo"></span> <span id="demo2"></span> 
+
+</html>
